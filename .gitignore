@@ -1,0 +1,5 @@
+# Project exclude paths
+/.gradle/
+/Games/Task/out/
+/Games/Task/out/production/classes/
+/Games/Task/out/test/classes/
