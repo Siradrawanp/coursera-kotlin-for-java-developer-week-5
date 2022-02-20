@@ -11,5 +11,11 @@ package games.gameOfFifteen
  * Thus the initial permutation should be correct.
  */
 fun isEven(permutation: List<Int>): Boolean {
-    TODO()
+    var count = 0
+    for (i in 0 until permutation.size-1) {
+        for (j in (i + 1) until permutation.size) {
+            if (permutation[i] > permutation[j]) count++
+        }
+    }
+    return (count % 2) == 0
 }

@@ -94,31 +94,31 @@ files:
   visible: true
   placeholders:
   - offset: 1227
-    length: 6
+    length: 99
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 1227
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
-  - offset: 1705
-    length: 6
+  - offset: 1798
+    length: 445
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 1705
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
-  - offset: 2052
-    length: 6
+  - offset: 2584
+    length: 581
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 2052
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |-
     package games.game2048
@@ -193,14 +193,14 @@ files:
 - name: src/games/game2048/Game2048Helper.kt
   visible: true
   placeholders:
-  - offset: 730
-    length: 6
+  - offset: 720
+    length: 612
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 730
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |+
     package games.game2048
@@ -230,13 +230,13 @@ files:
   visible: true
   placeholders:
   - offset: 820
-    length: 6
+    length: 94
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 820
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |-
     package games.game2048
@@ -272,13 +272,13 @@ files:
   visible: true
   placeholders:
   - offset: 385
-    length: 6
+    length: 1073
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 385
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |+
     package games.gameOfFifteen
@@ -300,13 +300,13 @@ files:
   visible: true
   placeholders:
   - offset: 480
-    length: 6
+    length: 210
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 480
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |-
     package games.gameOfFifteen
@@ -329,13 +329,13 @@ files:
   visible: true
   placeholders:
   - offset: 576
-    length: 6
+    length: 132
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 576
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
   text: |+
     package games.gameOfFifteen

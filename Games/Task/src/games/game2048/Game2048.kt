@@ -41,7 +41,9 @@ class Game2048(private val initializer: Game2048Initializer<Int>) : Game {
  * Add a new value produced by 'initializer' to a specified cell in a board.
  */
 fun GameBoard<Int?>.addNewValue(initializer: Game2048Initializer<Int>) {
-    TODO()
+    val pair = initializer.nextValue(this)
+    if (pair != null)
+        this[pair.first] = pair.second
 }
 
 /*
@@ -53,7 +55,19 @@ fun GameBoard<Int?>.addNewValue(initializer: Game2048Initializer<Int>) {
  * Return 'true' if the values were moved and 'false' otherwise.
  */
 fun GameBoard<Int?>.moveValuesInRowOrColumn(rowOrColumn: List<Cell>): Boolean {
-    TODO()
+    val movedAndMerged = rowOrColumn
+            .map { cell -> this[cell] }
+            .moveAndMergeEqual { value -> value * 2 }
+
+    val moved = movedAndMerged.isNotEmpty() && (movedAndMerged.size != rowOrColumn.size)
+    if (moved) {
+        rowOrColumn.forEach { cell -> this[cell] = null }
+        movedAndMerged.forEachIndexed { index, i ->
+            val cell = rowOrColumn[index]
+            this[cell] = i
+        }
+    }
+    return moved
 }
 
 /*
@@ -64,5 +78,16 @@ fun GameBoard<Int?>.moveValuesInRowOrColumn(rowOrColumn: List<Cell>): Boolean {
  * Return 'true' if the values were moved and 'false' otherwise.
  */
 fun GameBoard<Int?>.moveValues(direction: Direction): Boolean {
-    TODO()
+    fun moveAt(rowOrColumnAt: (Int) -> List<Cell>): Boolean {
+        return 1.rangeTo(width).fold(false) { moved, index ->
+            val rowOrColumn = rowOrColumnAt(index)
+            moveValuesInRowOrColumn(rowOrColumn) || moved
+        }
+    }
+    return when (direction) {
+        Direction.RIGHT     -> moveAt { i -> getRow(i,1.rangeTo(width))}
+        Direction.LEFT      -> moveAt { i -> getRow(i,width.downTo(1)) }
+        Direction.UP        -> moveAt { j -> getColumn(1.rangeTo(width), j) }
+        Direction.DOWN      -> moveAt { j -> getColumn(width.downTo(1), j) }
+    }
 }
