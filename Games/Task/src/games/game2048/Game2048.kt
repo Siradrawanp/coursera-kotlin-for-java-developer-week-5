@@ -85,8 +85,8 @@ fun GameBoard<Int?>.moveValues(direction: Direction): Boolean {
         }
     }
     return when (direction) {
-        Direction.RIGHT     -> moveAt { i -> getRow(i,1.rangeTo(width))}
-        Direction.LEFT      -> moveAt { i -> getRow(i,width.downTo(1)) }
+        Direction.RIGHT     -> moveAt { i -> getRow(i,width.downTo(1))}
+        Direction.LEFT      -> moveAt { i -> getRow(i, 1.rangeTo(width)) }
         Direction.UP        -> moveAt { j -> getColumn(1.rangeTo(width), j) }
         Direction.DOWN      -> moveAt { j -> getColumn(width.downTo(1), j) }
     }

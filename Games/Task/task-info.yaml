@@ -56,7 +56,7 @@ files:
       offset: 90
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   - offset: 1815
     length: 916
     placeholder_text: TODO()
@@ -65,7 +65,7 @@ files:
       offset: 149
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |+
     package board
 
@@ -101,7 +101,7 @@ files:
       offset: 1227
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   - offset: 1798
     length: 445
     placeholder_text: TODO()
@@ -110,16 +110,16 @@ files:
       offset: 1705
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   - offset: 2584
-    length: 581
+    length: 582
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 2052
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |-
     package games.game2048
 
@@ -201,7 +201,7 @@ files:
       offset: 730
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |+
     package games.game2048
 
@@ -237,7 +237,7 @@ files:
       offset: 820
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |-
     package games.game2048
 
@@ -279,7 +279,7 @@ files:
       offset: 385
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |+
     package games.gameOfFifteen
 
@@ -307,7 +307,7 @@ files:
       offset: 480
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |-
     package games.gameOfFifteen
 
@@ -336,7 +336,7 @@ files:
       offset: 576
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
   text: |+
     package games.gameOfFifteen
 
@@ -1609,5 +1609,19 @@ files:
   visible: false
   learner_created: false
 feedback_link: https://www.coursera.org/learn/kotlin-for-java-developers/programming/NSid0/game-2048-game-of-fifteen/discussions
-status: Unchecked
+status: Failed
+feedback:
+  message: "org.junit.ComparisonFailure: Wrong result after moving RIGHT and then\
+    \ adding &#39;4&#39; to Cell(3, 2) for\n2 - - 2\n- - - -\n- - - -\n- - - -\n "
+  time: Mon, 21 Feb 2022 05:07:00 UTC
+  expected: |-
+    - - - 4
+    - - - -
+    - 4 - -
+    - - - -
+  actual: |-
+    4 - - -
+    - - - -
+    - 4 - -
+    - - - -
 record: -1
